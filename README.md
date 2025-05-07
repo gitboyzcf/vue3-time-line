@@ -5,11 +5,11 @@
 # 安装
 
 ```bash
-npm install @boyzcf/vue3-time-line
+npm install vue3-time-line
 or
-pnpm install @boyzcf/vue3-time-line
+pnpm install vue3-time-line
 or
-yarn add @boyzcf/vue3-time-line
+yarn add vue3-time-line
 ```
 
 # 全局引入
@@ -25,15 +25,6 @@ const app = createApp(App)
 
 app.use(TimeLine, { comName: 'TimeLine' })
 app.mount('#app')
-```
-
-# 局部引入
-
-```js
-// demo.vue
-
-import { TimeLineCom } from 'time-line'
-
 ```
 
 # 基础用法
@@ -313,7 +304,6 @@ onBeforeUnmount(() => {
 
 </code></pre>
 </details>
-
 
 # 显示自定义元素
 
