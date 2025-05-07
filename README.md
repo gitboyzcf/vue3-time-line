@@ -2,6 +2,8 @@
 
 一个基于Vue3、Vite的时间轴组件，一般用于监控视频的回放
 
+> [Vue2 版本请点击](https://github.com/wanglin2/VideoTimeLine)
+
 # 安装
 
 ```bash
