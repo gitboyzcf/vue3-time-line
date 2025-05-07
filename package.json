@@ -1,19 +1,17 @@
 {
-  "name": "vue3-time-line",
-  "version": "0.0.2",
-  "description": "一个基于Vue3、Vite的时间轴组件，一般用于监控视频的回放",
-  "main": "./lib/vue3-time-line.umd.cjs",
+  "name": "@boyzcf/vue3-time-line",
+  "version": "1.0.1",
+  "description": "一个基于Vue3的时间轴组件，一般用于监控视频的回放",
+  "main": "./lib/vue3-time-line.umd.js",
   "module": "./lib/vue3-time-line.mjs",
   "types": "./lib/vue3-time-line.d.ts",
   "files": [
-    "lib",
-    "package.json",
-    "README.md"
+    "lib"
   ],
   "exports": {
     ".": {
-      "import": "./vue3-time-line.js",
-      "require": "./vue3-time-line.umd.cjs"
+      "import": "./lib/vue3-time-line.mjs",
+      "require": "./lib/vue3-time-line.umd.js"
     }
   },
   "keywords": [
@@ -21,7 +19,8 @@
     "@boyzcf/vue3-time-line",
     "canvas",
     "timeline",
-    "time axis"
+    "time axis",
+    "vue3-time-line"
   ],
   "author": "boyzcf",
   "scripts": {
@@ -34,6 +33,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@boyzcf/vue3-time-line": "^1.0.1",
     "dayjs": "^1.11.10",
     "sass": "^1.69.3",
     "vue": "^3.3.4",

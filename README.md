@@ -5,11 +5,11 @@
 # 安装
 
 ```bash
-npm install vue3-time-line
+npm install @boyzcf/vue3-time-line
 or
-pnpm install vue3-time-line
+pnpm install @boyzcf/vue3-time-line
 or
-yarn add vue3-time-line
+yarn add @boyzcf/vue3-time-line
 ```
 
 # 全局引入
@@ -19,7 +19,7 @@ yarn add vue3-time-line
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import TimeLine from 'time-line'
+import TimeLine from '@boyzcf/vue3-time-line'
 
 const app = createApp(App)
 
