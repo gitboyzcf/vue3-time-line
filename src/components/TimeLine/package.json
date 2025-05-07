@@ -1,19 +1,20 @@
 {
-  "name": "@boyzcf/vue3-time-line",
-  "version": "0.0.1",
+  "name": "vue3-time-line",
+  "version": "1.0.0",
   "private": false,
   "description": "一个基于Vue3、Vite的时间轴组件，一般用于监控视频的回放",
-  "main": "./time-line.umd.cjs",
-  "module": "./time-line.js",
+  "main": "./vue3-time-line.umd.cjs",
+  "module": "./vue3-time-line.js",
+  "types": "./vue3-time-line.d.ts",
   "exports": {
     ".": {
-      "import": "./time-line.js",
-      "require": "./time-line.umd.cjs"
+      "import": "./vue3-time-line.js",
+      "require": "./vue3-time-line.umd.cjs"
     }
   },
   "keywords": [
     "vue3",
-    "@boyzcf/vue3-time-line",
+    "@boyzcf/vue3-time-line", 
     "canvas",
     "timeline",
     "time axis"
@@ -22,10 +23,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gitboyzcf/time-line.git"
+    "url": "https://github.com/gitboyzcf/vue3-time-line.git"
   },
   "bugs": {
-    "url": "https://github.com/gitboyzcf/time-line/issues"
+    "url": "https://github.com/gitboyzcf/vue3-time-line/issues"
   },
   "dependencies": {
     "dayjs": "^1.11.10"

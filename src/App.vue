@@ -10,7 +10,7 @@
       <component :is="defaultData.activeComp"></component>
     </div>
     <div>
-      <a href="https://github.com/wanglin2/VideoTimeLine/tree/main/demo/src/components">demo源码</a>
+      <a href="https://github.com/gitboyzcf/vue3-time-line/blob/master/src/views">demo源码</a>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@
 <script setup>
 import { ref, shallowReactive, watch } from 'vue'
 import Base from './views/Base.vue'
-import Custom from './views/Custom.vue'
+import Custom from './views/Custom.vue' 
 import MultiSegment from './views/MultiSegment.vue'
 import Segment from './views/Segment.vue'
 import Year from './views/Year.vue'

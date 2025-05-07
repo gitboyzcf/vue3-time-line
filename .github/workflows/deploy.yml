@@ -1,0 +1,55 @@
+# 工作流的名称，如果省略，则使用当前文件名
+name: Auto Deploy
+
+# 从工作流生成的工作流运行的名称，如果省略，则使用提交时的commit信息
+run-name: Deploy by @${{ github.actor }}
+
+# 触发部署的条件
+on:
+  # 每当 push 到 master 分支时触发部署
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 当前流程要执行的任务，可以是多个。[my_first_job]就是一个任务
+jobs:
+  build:
+    name: build-and-deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: install
+        run: pnpm install
+
+      - name: Run Build Script
+        run: pnpm build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

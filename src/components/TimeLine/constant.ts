@@ -21,34 +21,34 @@ export const ZOOM_DATE_SHOW_RULE = [
   () => { // 全部显示
     return true
   },
-  date => { // 每五分钟显示
+  (date: Date) => { // 每五分钟显示
     return date.getMinutes() % 5 === 0
   },
-  date => { // 每十分钟显示
+  (date: Date) =>{ // 每十分钟显示
     return date.getMinutes() % 10 === 0
   },
-  date => { // 整点和半点显示
+  (date: Date) =>{ // 整点和半点显示
     return date.getMinutes() === 0 || date.getMinutes() === 30
   },
-  date => { // 整点显示
+  (date: Date) =>{ // 整点显示
     return date.getMinutes() === 0
   },
-  date => { // 偶数整点的小时
+  (date: Date) =>{ // 偶数整点的小时
     return date.getHours() % 2 === 0 && date.getMinutes() === 0
   },
-  date => { // 每三小时小时
+  (date: Date) =>{ // 每三小时小时
     return date.getHours() % 3 === 0 && date.getMinutes() === 0
   },
-  date => { // 每12小时
+  (date: Date) =>{ // 每12小时
     return date.getHours() % 12 === 0 && date.getMinutes() === 0
   },
-  date => { // 全不显示
+  () =>{ // 全不显示
     return false
   },
-  date => {
+  () =>{
     return true
   },
-  date => {
+  () =>{
     return true
   }
 ]
@@ -56,34 +56,34 @@ export const MOBILE_ZOOM_DATE_SHOW_RULE = [
   () => { // 全部显示
     return true
   },
-  date => { // 每五分钟显示
+  (date: Date) =>{ // 每五分钟显示
     return date.getMinutes() % 5 === 0
   },
-  date => { // 每十分钟显示
+  (date: Date) =>{ // 每十分钟显示
     return date.getMinutes() % 10 === 0
   },
-  date => { // 整点和半点显示
+  (date: Date) =>{ // 整点和半点显示
     return date.getMinutes() === 0 || date.getMinutes() === 30
   },
-  date => { // 偶数整点的小时
+  (date: Date) =>{ // 偶数整点的小时
     return date.getHours() % 2 === 0 && date.getMinutes() === 0
   },
-  date => { // 偶数整点的小时
+  (date: Date) =>{ // 偶数整点的小时
     return date.getHours() % 4 === 0 && date.getMinutes() === 0
   },
-  date => { // 每三小时小时
+  (date: Date) =>{ // 每三小时小时
     return date.getHours() % 3 === 0 && date.getMinutes() === 0
   },
-  date => { // 每12小时
+  (date: Date) =>{ // 每12小时
     return date.getHours() % 12 === 0 && date.getMinutes() === 0
   },
-  date => { // 全不显示
+  () =>{ // 全不显示
     return false
   },
-  date => {
+  () =>{
     return true
   },
-  date => {
+  () =>{
     return true
   }
 ]

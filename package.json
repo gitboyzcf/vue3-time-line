@@ -1,11 +1,33 @@
 {
-  "name": "time-line",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
+  "name": "vue3-time-line",
+  "version": "0.0.2",
+  "description": "一个基于Vue3、Vite的时间轴组件，一般用于监控视频的回放",
+  "main": "./lib/vue3-time-line.umd.cjs",
+  "module": "./lib/vue3-time-line.mjs",
+  "types": "./lib/vue3-time-line.d.ts",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./vue3-time-line.js",
+      "require": "./vue3-time-line.umd.cjs"
+    }
+  },
+  "keywords": [
+    "vue3",
+    "@boyzcf/vue3-time-line",
+    "canvas",
+    "timeline",
+    "time axis"
+  ],
+  "author": "boyzcf",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode lib",
+    "build:demo": "vite build --mode demo",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
@@ -14,19 +36,43 @@
   "dependencies": {
     "dayjs": "^1.11.10",
     "sass": "^1.69.3",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue3-time-line": "file:./lib"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",
+    "@types/node": "^22.15.12",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/test-utils": "^2.4.1",
+    "@vue/tsconfig": "^0.7.0",
+    "@vuedx/typescript-plugin-vue": "^0.7.6",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.3",
+    "typescript": "^5.8.3",
+    "typescript-plugin-css-modules": "^5.1.0",
     "vite": "^4.4.9",
-    "vitest": "^0.34.4"
-  }
+    "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-style-inject": "^0.0.1",
+    "vitest": "^0.34.4",
+    "vue-tsc": "^2.2.10"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitboyzcf/vue3-time-line.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitboyzcf/vue3-time-line/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "packageManager": "pnpm@10.1.0+sha1.ab7948c89104fdd3fc88b5b391fa4b73fd800631"
 }
